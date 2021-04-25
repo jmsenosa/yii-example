@@ -107,3 +107,43 @@ Stack trace:
 #4 {main}
 REQUEST_URI=/yii-framework/demos/example/index.php?r=group
 ---
+2021/04/25 13:05:04 [error] [exception.CDbException] CDbException: The relation "followers" in active record class "Group" is not specified correctly: the join table "tbl_group_follower " given in the foreign key cannot be found in the database. in D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php:1041
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(1320): CJoinElement->getJoinCondition()
+#1 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(797): CJoinQuery->join(Object(CJoinElement))
+#2 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(439): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php(1364): CActiveFinder->query(Object(CDbCriteria), true)
+#5 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php(1544): CActiveRecord->query(Object(CDbCriteria), true)
+#6 D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php(8): CActiveRecord->findAllByAttributes(Array)
+#7 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): GroupController->actionIndex()
+#8 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('')
+#12 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#13 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
+2021/04/25 13:07:43 [error] [exception.CDbException] CDbException: The relation "followers" in active record class "Group" is not specified correctly: the join table "tbl_group_follower " given in the foreign key cannot be found in the database. in D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php:1041
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(1320): CJoinElement->getJoinCondition()
+#1 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(797): CJoinQuery->join(Object(CJoinElement))
+#2 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(439): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php(1364): CActiveFinder->query(Object(CDbCriteria), true)
+#5 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php(1544): CActiveRecord->query(Object(CDbCriteria), true)
+#6 D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php(8): CActiveRecord->findAllByAttributes(Array)
+#7 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): GroupController->actionIndex()
+#8 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('')
+#12 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#13 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---

@@ -1,25 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "tbl_group".
+ * This is the model class for table "tbl_group_follower".
  *
- * The followings are the available columns in table 'tbl_group':
+ * The followings are the available columns in table 'tbl_group_follower':
  * @property integer $id
- * @property string $group_name
- * @property string $description
+ * @property integer $group_id
  * @property integer $user_id
  *
  * The followings are the available model relations:
  * @property User $user
+ * @property Group $group
  */
-class Group extends CActiveRecord
+class GroupFollower extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_group';
+		return 'tbl_group_follower';
 	}
 
 	/**
@@ -30,11 +30,11 @@ class Group extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('group_name, description, user_id', 'required'),
-			array('id, user_id', 'numerical', 'integerOnly'=>true),
+			array('group_id, user_id', 'required'),
+			array('id, group_id, user_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, group_name, description, user_id', 'safe', 'on'=>'search'),
+			array('id, group_id, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,9 +46,8 @@ class Group extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'owner' => array(self::BELONGS_TO, 'User', 'user_id'),
-			'followers' => array(self::MANY_MANY, 'User',
-				'tbl_group_follower(group_id, user_id)'),
+			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'group' => array(self::BELONGS_TO, 'Group', 'group_id'),
 		);
 	}
 
@@ -59,8 +58,7 @@ class Group extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'group_name' => 'Group Name',
-			'description' => 'Description',
+			'group_id' => 'Group',
 			'user_id' => 'User',
 		);
 	}
@@ -84,8 +82,7 @@ class Group extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('group_name',$this->group_name,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('group_id',$this->group_id);
 		$criteria->compare('user_id',$this->user_id);
 
 		return new CActiveDataProvider($this, array(
@@ -97,7 +94,7 @@ class Group extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Group the static model class
+	 * @return GroupFollower the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

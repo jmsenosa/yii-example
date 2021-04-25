@@ -5,12 +5,11 @@ class GroupController extends Controller
 	public function actionIndex()
 	{
 
-		$groups = Group::model()->with('user')->findAllByAttributes(array('user_id' => '1'));
+		$groups = Group::model()->with('owner', 'followers')->findAllByAttributes(array('user_id' => '1'));
 
 		foreach ($groups as $key => $group) {
-			echo "<pre>";
-			print_r($group->user);
-			die();
+			echo "Group Name: ".$group->group_name."\n"; // should have used "name"
+			echo "test";
 		}
 		$this->render('index');
 	}
