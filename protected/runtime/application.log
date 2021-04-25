@@ -1,0 +1,51 @@
+2021/04/25 11:06:32 [error] [php] mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\SiteController.php:67)
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): SiteController->runAction()
+#2 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): SiteController->run()
+#4 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-framework/demos/example/index.php?r=site/contact
+in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\SiteController.php (67)
+in D:\xampp\htdocs\yii-framework\demos\example\index.php (13)
+2021/04/25 11:20:00 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in D:\xampp\htdocs\yii-framework\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii-framework\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii-framework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii-framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii-framework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii-framework\framework\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('TestMultipleUse...')
+#8 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('user/TestMultip...')
+#9 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=user/TestMultipleUserModel
+---
+2021/04/25 11:21:52 [error] [exception.CException] CException: Property "CDbCriteria.0" is not defined. in D:\xampp\htdocs\yii-framework\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'test1')
+#1 D:\xampp\htdocs\yii-framework\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 D:\xampp\htdocs\yii-framework\framework\db\schema\CDbCommandBuilder.php(664): CDbCommandBuilder->createCriteria(Array, Array)
+#3 D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php(1526): CDbCommandBuilder->createColumnCriteria(Object(CDbTableSchema), Array, Array, Array, ''t'.')
+#4 D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\UserController.php(168): CActiveRecord->findByAttributes(Array, Array)
+#5 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): UserController->actionTestMultipleUserModel()
+#6 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yii-framework\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yii-framework\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\xampp\htdocs\yii-framework\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii-framework\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii-framework\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\xampp\htdocs\yii-framework\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('testMultipleUse...')
+#15 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('user/testMultip...')
+#16 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=user/testMultipleUserModel
+---
