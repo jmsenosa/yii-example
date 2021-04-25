@@ -49,3 +49,61 @@ Stack trace:
 #18 {main}
 REQUEST_URI=/yii-framework/demos/example/index.php?r=user/testMultipleUserModel
 ---
+2021/04/25 12:37:45 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CActiveRecord::findAllByAttributes(), 0 passed in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php on line 9 and at least 1 expected in D:\xampp\htdocs\yii-framework\framework\db\ar\CActiveRecord.php:1539
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php(9): CActiveRecord->findAllByAttributes()
+#1 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): GroupController->actionIndex()
+#2 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('')
+#6 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#7 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
+2021/04/25 12:38:26 [error] [exception.Error] Error: Call to a member function data() on array in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php:8
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): GroupController->actionIndex()
+#1 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('')
+#5 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#6 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
+2021/04/25 12:39:13 [error] [exception.Error] Error: Call to a member function data() on array in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php:8
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\actions\CInlineAction.php(49): GroupController->actionIndex()
+#1 D:\xampp\htdocs\yii-framework\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\xampp\htdocs\yii-framework\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\xampp\htdocs\yii-framework\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(282): CController->run('')
+#5 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#6 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
+2021/04/25 12:39:21 [error] [exception.ParseError] ParseError: syntax error, unexpected 'print_r' (T_STRING) in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php:10
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(276): CWebApplication->createController('')
+#1 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#2 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
+2021/04/25 12:40:13 [error] [exception.ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in D:\xampp\htdocs\yii-framework\demos\example\protected\controllers\GroupController.php:8
+Stack trace:
+#0 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(276): CWebApplication->createController('')
+#1 D:\xampp\htdocs\yii-framework\framework\web\CWebApplication.php(141): CWebApplication->runController('group')
+#2 D:\xampp\htdocs\yii-framework\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 D:\xampp\htdocs\yii-framework\demos\example\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/yii-framework/demos/example/index.php?r=group
+---
