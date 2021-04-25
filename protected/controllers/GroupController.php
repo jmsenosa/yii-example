@@ -8,10 +8,15 @@ class GroupController extends Controller
 		$groups = Group::model()->with('owner', 'followers')->findAllByAttributes(array('user_id' => '1'));
 
 		foreach ($groups as $key => $group) {
-			echo "Group Name: ".$group->group_name."\n"; // should have used "name"
-			echo "test";
+			echo "Group Name: ".$group->group_name."<br />"; // should have used "name"
+			echo "created by: ".$group->owner->email."<br />";
+			echo "Members:"."<br />";
+			foreach ($group->followers as $follower) {
+				echo $follower->email."<br />";
+			}
+
 		}
-		$this->render('index');
+		// $this->render('index');
 	}
 
 	// Uncomment the following methods and override them if needed
